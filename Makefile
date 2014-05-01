@@ -62,8 +62,9 @@ $(OBJS): $$*.tx $$(patsubst %.asm, %.tx, $$($$*_DEPENDENCIES))
 pokecrystal.gbc: $(CRYSTAL_OBJS)
 	rgblink -n $*.sym -m $*.map -o $@ $^
 	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
-	cmp baserom.gbc $@
 
+compare: pokecrystal.gbc
+	cmp baserom.gbc pokecrystal.gbc
 
 pngs:
 	find . -iname "*.lz"      -exec $(GFX) unlz {} +

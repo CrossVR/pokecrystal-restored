@@ -22,6 +22,11 @@
 *.map
 *.sym
 
+# gfx files
+*.png
+*.2bpp
+*.tilemap
+
 # compare.sh
 baserom.txt
 pokecrystal.txt
