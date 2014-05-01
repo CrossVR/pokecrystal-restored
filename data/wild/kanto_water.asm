@@ -144,4 +144,10 @@
 	db 30,TENTACOOL
 	db 35,TENTACRUEL
 
+	db GROUP_SAFARI_ZONE_BETA, MAP_SAFARI_ZONE_BETA
+	db $0f ; encounter rate
+	db 15,REMORAID
+	db 20,REMORAID
+	db 25,OCTILLERY
+
 	db $ff ; end

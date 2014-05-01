@@ -1250,7 +1250,7 @@ SafariZoneFuchsiaGateBeta_MapHeader: ; 0x94409
 
 SafariZoneBeta_MapHeader: ; 0x94412
 	; bank, tileset, permission
-	db BANK(SafariZoneBeta_SecondMapHeader), $19, 4
+	db BANK(SafariZoneBeta_SecondMapHeader), $19, 2
 
 	; second map header
 	dw SafariZoneBeta_SecondMapHeader

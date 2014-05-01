@@ -810,4 +810,31 @@
 	db 42,GOLBAT
 	db 42,GOLBAT
 
+	db GROUP_SAFARI_ZONE_BETA, MAP_SAFARI_ZONE_BETA
+	db $19,$19,$19 ; encounter rates: morn/day/nite
+	; morn
+	db 10,MAREEP
+	db 10,MAREEP
+	db 15,VULPIX
+	db 15,FLAAFFY
+	db 15,FLAAFFY
+	db 10,MANKEY
+	db 15,MANKEY
+	; day
+	db 10,MAREEP
+	db 10,MAREEP
+	db 15,VULPIX
+	db 15,FLAAFFY
+	db 15,FLAAFFY
+	db 10,MANKEY
+	db 15,MANKEY
+	; nite
+	db 10,MANKEY
+	db 10,MANKEY
+	db 15,PRIMEAPE
+	db 10,VULPIX
+	db 15,VULPIX
+	db 25,GIRAFARIG
+	db 25,GIRAFARIG
+
 	db $ff ; end
