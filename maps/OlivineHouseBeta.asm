@@ -32,7 +32,7 @@ UnknownText_0x9c5a2: ; 0x9c5a2
 	line "got sick, the"
 
 	para "PHARMACIST in"
-	line "ECRUTEAK made some"
+	line "CIANWOOD made some"
 	cont "medicine for me."
 	done
 ; 0x9c5f0
@@ -62,6 +62,6 @@ OlivineHouseBeta_MapEventHeader: ; 0x9c601
 	; people-events
 	db 2
 	person_event SPRITE_TEACHER, 7, 6, $3, $0, 255, 255, $0, 0, TeacherScript_0x9c58f, $ffff
-	person_event SPRITE_RHYDON, 8, 10, $4, $20, 255, 255, $0, 0, RhydonScript_0x9c592, $ffff
+	person_event SPRITE_RHYDON, 8, 10, $16, $0, 255, 255, $0, 0, RhydonScript_0x9c592, $ffff
 ; 0x9c635
 
