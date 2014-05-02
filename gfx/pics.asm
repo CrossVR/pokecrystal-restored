@@ -209,7 +209,6 @@ EspeonFrontpic:      INCBIN "gfx/pics/espeon/front.6x6.2bpp.lz"
 XatuFrontpic:        INCBIN "gfx/pics/xatu/front.6x6.2bpp.lz"
 MewFrontpic:         INCBIN "gfx/pics/mew/front.5x5.2bpp.lz"
 OctilleryFrontpic:   INCBIN "gfx/pics/octillery/front.6x6.2bpp.lz"
-JynxFrontpic:        INCBIN "gfx/pics/jynx/front.6x6.2bpp.lz"
 WobbuffetFrontpic:   INCBIN "gfx/pics/wobbuffet/front.6x6.2bpp.lz"
 DelibirdFrontpic:    INCBIN "gfx/pics/delibird/front.6x6.2bpp.lz"
 LedianFrontpic:      INCBIN "gfx/pics/ledian/front.6x6.2bpp.lz"
@@ -667,6 +666,7 @@ UnownDBackpic:       INCBIN "gfx/pics/unown_d/back.6x6.2bpp.lz"
 
 SECTION "Pics 18", ROMX, BANK[PICS_18]
 
+JynxFrontpic:        INCBIN "gfx/pics/jynx/front.6x6.2bpp.lz"
 SpinarakBackpic:     INCBIN "gfx/pics/spinarak/back.6x6.2bpp.lz"
 RaikouBackpic:       INCBIN "gfx/pics/raikou/back.6x6.2bpp.lz"
 UnownKFrontpic:      INCBIN "gfx/pics/unown_k/front.5x5.2bpp.lz"
