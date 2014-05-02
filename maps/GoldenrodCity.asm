@@ -296,7 +296,7 @@ MapGoldenrodCitySignpost9Script: ; 0x198a56
 ; 0x198a59
 
 MapGoldenrodCitySignpost10Script: ; 0x198a59
-	jumpstd $0010
+	jumptext UnknownText_0x199004
 ; 0x198a5c
 
 MapGoldenrodCitySignpost11Script: ; 0x198a5c
@@ -643,8 +643,8 @@ GoldenrodCity_MapEventHeader: ; 0x1991d1
 	warp_def $f, $5, 1, GROUP_RADIO_TOWER_1F, MAP_RADIO_TOWER_1F
 	warp_def $1, $13, 3, GROUP_ROUTE_35_GOLDENROD_GATE, MAP_ROUTE_35_GOLDENROD_GATE
 	warp_def $5, $9, 8, GROUP_UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, MAP_UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES
-	warp_def $1d, $b, 5, GROUP_UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, MAP_UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES
-	warp_def $1b, $f, 1, GROUP_GOLDENROD_POKECENTER_1F, MAP_GOLDENROD_POKECENTER_1F
+	warp_def $1d, $9, 5, GROUP_UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, MAP_UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES
+	warp_def $1b, $e, 1, GROUP_GOLDENROD_POKECENTER_1F, MAP_GOLDENROD_POKECENTER_1F
 
 	; xy triggers
 	db 0
@@ -660,8 +660,8 @@ GoldenrodCity_MapEventHeader: ; 0x1991d1
 	signpost 22, 16, $0, MapGoldenrodCitySignpost6Script
 	signpost 7, 12, $0, MapGoldenrodCitySignpost7Script
 	signpost 6, 8, $0, MapGoldenrodCitySignpost8Script
-	signpost 30, 12, $0, MapGoldenrodCitySignpost9Script
-	signpost 27, 16, $1, MapGoldenrodCitySignpost10Script
+	signpost 30, 10, $0, MapGoldenrodCitySignpost9Script
+	signpost 27, 17, $1, MapGoldenrodCitySignpost10Script
 	signpost 6, 30, $0, MapGoldenrodCitySignpost11Script
 
 	; people-events
@@ -672,7 +672,7 @@ GoldenrodCity_MapEventHeader: ; 0x1991d1
 	person_event SPRITE_COOLTRAINER_F, 30, 24, $2, $21, 255, 255, $0, 0, CooltrainerFScript_0x1989fd, $06cf
 	person_event SPRITE_YOUNGSTER, 21, 23, $2, $11, 255, 255, $80, 0, YoungsterScript_0x198a11, $06cf
 	person_event SPRITE_LASS, 14, 21, $5, $2, 255, 255, $a0, 0, LassScript_0x198a14, $06cf
-	person_event SPRITE_GRAMPS, 31, 15, $5, $1, 255, 255, $0, 0, GrampsScript_0x198a17, $06cf
+	person_event SPRITE_GRAMPS, 31, 14, $5, $1, 255, 255, $0, 0, GrampsScript_0x198a17, $06cf
 	person_event SPRITE_ROCKET, 20, 8, $7, $0, 255, 255, $0, 0, RocketScript_0x198a1a, $06cc
 	person_event SPRITE_ROCKET, 24, 32, $7, $0, 255, 255, $0, 0, RocketScript_0x198a29, $06cd
 	person_event SPRITE_ROCKET, 19, 12, $6, $0, 255, 255, $0, 0, RocketScript_0x198a2c, $06cd

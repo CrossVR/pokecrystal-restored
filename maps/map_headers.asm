@@ -2319,13 +2319,13 @@ GoldenrodGameCorner_MapHeader: ; 0x94760
 
 GoldenrodPokeCenter1F_MapHeader: ; 0x94769
 	; bank, tileset, permission
-	db BANK(GoldenrodPokeCenter1F_SecondMapHeader), $7, 3
+	db BANK(GoldenrodPokeCenter1F_SecondMapHeader), $15, 3
 
 	; second map header
 	dw GoldenrodPokeCenter1F_SecondMapHeader
 
 	; location on world map, music, time of day, fishing group
-	db GOLDENROD_CITY, MUSIC_POKEMON_CENTER, 1, 1
+	db GOLDENROD_CITY, MUSIC_MOBILE_CENTER, 1, 1
 ; 0x94772
 
 GoldenrodPokeComCenter2FMobile_MapHeader: ; 0x94772
@@ -2336,7 +2336,7 @@ GoldenrodPokeComCenter2FMobile_MapHeader: ; 0x94772
 	dw GoldenrodPokeComCenter2FMobile_SecondMapHeader
 
 	; location on world map, music, time of day, fishing group
-	db GOLDENROD_CITY, MUSIC_POKEMON_CENTER, 1, 1
+	db GOLDENROD_CITY, MUSIC_MOBILE_CENTER, 1, 1
 ; 0x9477b
 
 IlexForestAzaleaGate_MapHeader: ; 0x9477b
