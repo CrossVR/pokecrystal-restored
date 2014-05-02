@@ -63,9 +63,9 @@ MenuDataHeader_0x62602: ; 0x62602
 MenuData2_0x6260a: ; 0x6260a
 	db $80 ; flags
 	db 3 ; items
-	db "# つうしん クラブ@" ; # COM CLUB
-	db "モバイルセンター@" ; MOBILE CENTER
-	db "やめる@" ; QUIT
+	db "#COM CLUB@" ; # COM CLUB
+	db "MOBILE CENTER@" ; MOBILE CENTER
+	db "QUIT@" ; QUIT
 ; 0x62624
 
 
@@ -114,9 +114,9 @@ MenuDataHeader_0x6264c: ; 0x6264c
 MenuData2_0x62654: ; 0x62654
 	db $80 ; flags
 	db 3 ; items
-	db "でんわ",$1f,"つかうとき@" ; Use phone
-	db "でんわ",$4a,"つながらないとき@" ; Don't use phone
-	db "やめる@" ; QUIT
+	db "INSTRUCTIONS@" ; Use phone
+	db "TROUBLESHOOT@" ; Don't use phone
+	db "QUIT@" ; QUIT
 ; 0x62673
 
 

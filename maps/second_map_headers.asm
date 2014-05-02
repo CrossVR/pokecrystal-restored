@@ -5999,10 +5999,10 @@ GoldenrodPokeCenter1F_SecondMapHeader: ; 0x95fe4
 	db $0
 
 	; height, width
-	db GOLDENROD_POKECENTER_1F_HEIGHT, GOLDENROD_POKECENTER_1F_WIDTH
+	db GOLDENROD_POKECOM_CENTER_2F_MOBILE_HEIGHT, GOLDENROD_POKECOM_CENTER_2F_MOBILE_WIDTH
 
 	; blockdata (bank-then-pointer)
-	dbw BANK(OlivinePokeCenter1F_BlockData), OlivinePokeCenter1F_BlockData
+	dbw BANK(GoldenrodPokeComCenter2FMobile_BlockData), GoldenrodPokeComCenter2FMobile_BlockData
 
 	; script header (bank-then-pointer)
 	dbw BANK(GoldenrodPokeCenter1F_MapScriptHeader), GoldenrodPokeCenter1F_MapScriptHeader

@@ -15,8 +15,7 @@ UnknownScript_0x60f94: ; 0x60f94
 	special $0086
 	checkevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
 	iftrue UnknownScript_0x60fd8
-	playsound SFX_EXIT_BUILDING
-	moveperson $3, $0, $7
+	moveperson $3, $c, $b
 	disappear $3
 	appear $3
 	playmusic MUSIC_SHOW_ME_AROUND
@@ -33,8 +32,9 @@ UnknownScript_0x60f94: ; 0x60f94
 	loadmovesprites
 	applymovement $3, MovementData_0x61060
 	special $003d
+	moveperson $3, $10, $8
 	disappear $3
-	playsound SFX_EXIT_BUILDING
+	appear $3
 UnknownScript_0x60fd8: ; 0x60fd8
 	end
 ; 0x60fd9
@@ -44,8 +44,7 @@ UnknownScript_0x60fd9: ; 0x60fd9
 	special $0086
 	checkevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
 	iftrue UnknownScript_0x6101d
-	playsound SFX_EXIT_BUILDING
-	moveperson $3, $0, $7
+	moveperson $3, $d, $b
 	disappear $3
 	appear $3
 	playmusic MUSIC_SHOW_ME_AROUND
@@ -62,8 +61,9 @@ UnknownScript_0x60fd9: ; 0x60fd9
 	loadmovesprites
 	applymovement $3, MovementData_0x6106c
 	special $003d
+	moveperson $3, $10, $8
 	disappear $3
-	playsound SFX_EXIT_BUILDING
+	appear $3
 UnknownScript_0x6101d: ; 0x6101d
 	end
 ; 0x6101e
@@ -114,38 +114,54 @@ UnknownScript_0x61051: ; 0x61051
 ; 0x6105a
 
 MovementData_0x6105a: ; 0x6105a
-	step_up
-	step_right
-	step_right
-	step_right
-	turn_head_down
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_down
+	step_down
+	step_down
 	step_end
 ; 0x61060
 
 MovementData_0x61060: ; 0x61060
-	step_left
-	step_left
-	step_left
-	step_down
-	step_end
-; 0x61065
-
-MovementData_0x61065: ; 0x61065
+	step_up
+	step_up
 	step_up
 	step_right
 	step_right
 	step_right
 	step_right
-	turn_head_down
+	step_right
+	step_right
 	step_end
-; 0x6106c
+; 0x61065
 
-MovementData_0x6106c: ; 0x6106c
+MovementData_0x61065: ; 0x61065
+	step_left
+	step_left
 	step_left
 	step_left
 	step_left
 	step_left
 	step_down
+	step_down
+	step_down
+	step_end
+; 0x6106c
+
+MovementData_0x6106c: ; 0x6106c
+	step_up
+	step_up
+	step_up
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
+	step_right
 	step_end
 ; 0x61072
 
@@ -868,31 +884,38 @@ UnknownText_0x62549: ; 0x62549
 	done
 ; 0x62564
 
+InfoSignScript:
+	jumptext UnknownText_0x62370
+
+ReceptionistScript:
+	jumptextfaceplayer UnknownText_0x61c18
+
 GoldenrodPokeCenter1F_MapEventHeader: ; 0x62564
 	; filler
 	db 0, 0
 
 	; warps
 	db 4
-	warp_def $7, $3, 15, GROUP_GOLDENROD_CITY, MAP_GOLDENROD_CITY
-	warp_def $7, $4, 15, GROUP_GOLDENROD_CITY, MAP_GOLDENROD_CITY
+	warp_def $F, $6, 15, GROUP_GOLDENROD_CITY, MAP_GOLDENROD_CITY
+	warp_def $F, $7, 15, GROUP_GOLDENROD_CITY, MAP_GOLDENROD_CITY
 	warp_def $6, $0, 1, GROUP_GOLDENROD_POKECOM_CENTER_2F_MOBILE, MAP_GOLDENROD_POKECOM_CENTER_2F_MOBILE
-	warp_def $7, $0, 1, GROUP_POKECENTER_2F, MAP_POKECENTER_2F
+	warp_def $F, $0, 1, GROUP_POKECENTER_2F, MAP_POKECENTER_2F
 
 	; xy triggers
 	db 2
-	xy_trigger 0, $7, $3, $0, UnknownScript_0x60f94, $0, $0
-	xy_trigger 0, $7, $4, $0, UnknownScript_0x60fd9, $0, $0
+	xy_trigger 0, $F, $6, $0, UnknownScript_0x60f94, $0, $0
+	xy_trigger 0, $F, $7, $0, UnknownScript_0x60fd9, $0, $0
 
 	; signposts
-	db 0
+	db 1
+	signpost 9, 2, $0, InfoSignScript
 
 	; people-events
 	db 5
-	person_event SPRITE_NURSE, 5, 7, $6, $0, 255, 255, $0, 0, NurseScript_0x60f91, $ffff
-	person_event SPRITE_LINK_RECEPTIONIST, 12, 20, $6, $0, 255, 255, $90, 0, ObjectEvent, $ffff
-	person_event SPRITE_GAMEBOY_KID, 5, 10, $6, $0, 255, 255, $a0, 0, GameboyKidScript_0x6101e, $ffff
-	person_event SPRITE_LASS, 8, 5, $5, $1, 255, 255, $0, 0, LassScript_0x61021, $ffff
-	person_event SPRITE_POKEFAN_F, 9, 11, $6, $0, 255, 255, $b0, 0, PokefanFScript_0x61024, $ffff
+	person_event SPRITE_NURSE, 11, 11, $6, $0, 255, 255, $0, 0, NurseScript_0x60f91, $ffff
+	person_event SPRITE_LINK_RECEPTIONIST, 12, 20, $6, $0, 255, 255, $90, 0, ReceptionistScript, $ffff
+	person_event SPRITE_GAMEBOY_KID, 16, 15, $6, $0, 255, 255, $a0, 0, GameboyKidScript_0x6101e, $ffff
+	person_event SPRITE_LASS, 15, 8, $5, $1, 255, 255, $0, 0, LassScript_0x61021, $ffff
+	person_event SPRITE_POKEFAN_F, 18, 23, $6, $0, 255, 255, $b0, 0, PokefanFScript_0x61024, $ffff
 ; 0x625cf
 
