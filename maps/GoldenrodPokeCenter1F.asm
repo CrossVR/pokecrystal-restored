@@ -890,6 +890,27 @@ InfoSignScript:
 ReceptionistScript:
 	jumptextfaceplayer UnknownText_0x61c18
 
+GrampsScript:
+	jumptextfaceplayer UnknownText_0x62173
+
+SuperNerdScript:
+	jumptextfaceplayer UnknownText_0x61c89
+
+LassScript:
+	jumptextfaceplayer UnknownText_0x61dfd
+
+YoungsterScript:
+	jumptextfaceplayer UnknownText_0x61efa
+
+TeacherScript:
+	jumptextfaceplayer UnknownText_0x61f48
+
+RockerScript:
+	jumptextfaceplayer UnknownText_0x61fc9
+
+NewsMachineScript:
+	jumptext UnknownText_0x623c7
+
 GoldenrodPokeCenter1F_MapEventHeader: ; 0x62564
 	; filler
 	db 0, 0
@@ -907,15 +928,36 @@ GoldenrodPokeCenter1F_MapEventHeader: ; 0x62564
 	xy_trigger 0, $F, $7, $0, UnknownScript_0x60fd9, $0, $0
 
 	; signposts
-	db 1
+	db 16
 	signpost 9, 2, $0, InfoSignScript
+	signpost 5, 24, $0, NewsMachineScript
+	signpost 6, 24, $0, NewsMachineScript
+	signpost 7, 24, $0, NewsMachineScript
+	signpost 9, 24, $0, NewsMachineScript
+	signpost 10, 24, $0, NewsMachineScript
+	signpost 11, 25, $0, NewsMachineScript
+	signpost 11, 26, $0, NewsMachineScript
+	signpost 11, 27, $0, NewsMachineScript
+	signpost 11, 28, $0, NewsMachineScript
+	signpost 5, 29, $0, NewsMachineScript
+	signpost 6, 29, $0, NewsMachineScript
+	signpost 7, 29, $0, NewsMachineScript
+	signpost 8, 29, $0, NewsMachineScript
+	signpost 9, 29, $0, NewsMachineScript
+	signpost 10, 29, $0, NewsMachineScript
 
 	; people-events
-	db 5
+	db 11
 	person_event SPRITE_NURSE, 11, 11, $6, $0, 255, 255, $0, 0, NurseScript_0x60f91, $ffff
 	person_event SPRITE_LINK_RECEPTIONIST, 12, 20, $6, $0, 255, 255, $90, 0, ReceptionistScript, $ffff
+	person_event SPRITE_SUPER_NERD, 9, 17, $4, $10, 255, 255, $0, 0, SuperNerdScript, $ffff
+	person_event SPRITE_LASS, 13, 22, $7, $0, 255, 255, $0, 0, LassScript, $ffff
+	person_event SPRITE_YOUNGSTER, 12, 27, $9, $0, 255, 255, $0, 0, YoungsterScript, $ffff
+	person_event SPRITE_TEACHER, 13, 34, $8, $0, 255, 255, $0, 0, TeacherScript, $ffff
+	person_event SPRITE_ROCKER, 9, 34, $8, $0, 255, 255, $0, 0, RockerScript, $ffff
 	person_event SPRITE_GAMEBOY_KID, 16, 15, $6, $0, 255, 255, $a0, 0, GameboyKidScript_0x6101e, $ffff
+	person_event SPRITE_GRAMPS, 18, 23, $6, $0, 255, 255, $0, 0, GrampsScript, $ffff
 	person_event SPRITE_LASS, 15, 8, $5, $1, 255, 255, $0, 0, LassScript_0x61021, $ffff
-	person_event SPRITE_POKEFAN_F, 18, 23, $6, $0, 255, 255, $b0, 0, PokefanFScript_0x61024, $ffff
+	person_event SPRITE_POKEFAN_F, 18, 19, $6, $0, 255, 255, $b0, 0, PokefanFScript_0x61024, $ffff
 ; 0x625cf
 
