@@ -141,11 +141,19 @@ UnknownScript_0x59228: ; 0x59228
 ; 0x5922e
 
 UnknownScript_0x5922e: ; 0x5922e
-	2writetext UnknownText_0x59769
+	special $00a0
+	iftrue PokeComScript
+	2writetext UnknownText_0x59669
 	closetext
 	loadmovesprites
 	end
 ; 0x59234
+
+PokeComScript:
+	2writetext UnknownText_0x596d3
+	closetext
+	loadmovesprites
+	end
 
 MapRuinsofAlphResearchCenterSignpost1Script: ; 0x59234
 	loadfont
