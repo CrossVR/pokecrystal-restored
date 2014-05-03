@@ -7,6 +7,7 @@ GoldenrodPokeCenter1F_MapScriptHeader: ; 0x60f8f
 ; 0x60f91
 
 NurseScript_0x60f91: ; 0x60f91
+	setevent EVENT_HEALING_IN_POKECOM_CENTER
 	jumpstd $0000
 ; 0x60f94
 

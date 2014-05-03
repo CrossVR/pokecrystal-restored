@@ -72,7 +72,7 @@ PokeCenterNurseScript: ; bc09c
 
 .morn
 ; Different text if we're in the com center
-	checkevent $032a
+	checkevent EVENT_HEALING_IN_POKECOM_CENTER
 	iftrue .morn_comcenter
 ; Good morning! Welcome to ...
 	3writetext UnknownText_0x1b0000
@@ -86,7 +86,7 @@ PokeCenterNurseScript: ; bc09c
 
 .day
 ; Different text if we're in the com center
-	checkevent $032a
+	checkevent EVENT_HEALING_IN_POKECOM_CENTER
 	iftrue .day_comcenter
 ; Hello! Welcome to ...
 	3writetext UnknownText_0x1b002b
@@ -100,7 +100,7 @@ PokeCenterNurseScript: ; bc09c
 
 .nite
 ; Different text if we're in the com center
-	checkevent $032a
+	checkevent EVENT_HEALING_IN_POKECOM_CENTER
 	iftrue .nite_comcenter
 ; Good evening! You're out late. ...
 	3writetext UnknownText_0x1b004f
@@ -114,7 +114,7 @@ PokeCenterNurseScript: ; bc09c
 
 .heal
 ; If we come back, don't welcome us to the com center again
-	clearevent $032a
+	clearevent EVENT_HEALING_IN_POKECOM_CENTER
 ; Ask if you want to heal
 	3writetext UnknownText_0x1b017a
 	yesorno
@@ -164,7 +164,7 @@ PokeCenterNurseScript: ; bc09c
 ; Different text for com center (excludes 'in a Pokemon Center')
 ; Since flag $32a is cleared when healing,
 ; this text is never actually seen
-	checkevent $032a
+	checkevent EVENT_HEALING_IN_POKECOM_CENTER
 	iftrue .pokerus_comcenter
 ; Your Pokemon appear to be infected ...
 	3writetext UnknownText_0x1b0241
