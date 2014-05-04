@@ -27,27 +27,22 @@ UnknownScript_0x62f88: ; 0x62f88
 GrampsScript_0x62f8f: ; 0x62f8f
 	faceplayer
 	loadfont
-	checkevent EVENT_GOT_ODD_EGG
+	checkevent EVENT_GOT_ODD_EGG_TICKET
 	iftrue UnknownScript_0x62fbd
-	2writetext UnknownText_0x630ce
+	2writetext UnknownText_0x62ff7
 	keeptextopen
-	loadmovesprites
-	checkcode $1
-	if_equal $6, UnknownScript_0x62fb6
-	special $007d
-	loadfont
-	2writetext UnknownText_0x631ae
-	playsound SFX_KEY_ITEM
-	waitbutton
-	2writetext UnknownText_0x631c3
+	writebyte $81
+	special $00a5
+	iftrue UnknownScript_0x62fb6
+	verbosegiveitem EGG_TICKET, 1
+	2writetext UnknownText_0x631a1
 	closetext
 	loadmovesprites
-	setevent EVENT_GOT_ODD_EGG
+	setevent EVENT_GOT_ODD_EGG_TICKET
 	end
 ; 0x62fb6
 
 UnknownScript_0x62fb6: ; 0x62fb6
-	loadfont
 	2writetext UnknownText_0x63237
 	closetext
 	loadmovesprites
@@ -142,12 +137,6 @@ UnknownText_0x631a1: ; 0x631a1
 	text "Come again."
 	done
 ; 0x631ae
-
-UnknownText_0x631ae: ; 0x631ae
-	text $52, " received"
-	line "ODD EGG!"
-	done
-; 0x631c3
 
 UnknownText_0x631c3: ; 0x631c3
 	text "I found that when"

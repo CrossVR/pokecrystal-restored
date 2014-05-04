@@ -889,7 +889,59 @@ InfoSignScript:
 	jumptext UnknownText_0x62370
 
 ReceptionistScript:
-	jumptextfaceplayer UnknownText_0x61c18
+	loadfont
+	checkitem EGG_TICKET
+	iftrue OddEggScript
+	2writetext UnknownText_0x61c18
+	closetext
+	loadmovesprites
+	end
+
+OddEggScript:
+	2writetext UnknownText_0x6176f
+	keeptextopen
+	checkcode $1
+	if_equal $6, PartyFull
+	loadfont
+	2writetext UnknownText_0x6191f
+	closetext
+	loadmovesprites
+	applymovement $3, ReceptionistMoveToReceiver
+	wait 10
+	applymovement $3, ReceptionistMoveFromReceiver
+	loadfont
+	2writetext UnknownText_0x61936
+	closetext
+	special $007d
+	2writetext ReceivedEgg
+	playsound $0091
+	waitbutton
+	closetext
+	loadmovesprites
+	end
+
+PartyFull:
+	2writetext UnknownText_0x614ed
+	closetext
+	loadmovesprites
+	end
+
+ReceivedEgg: ; 0x631ae
+	text $52, " received"
+	line "ODD EGG!"
+	done
+
+ReceptionistMoveToReceiver:
+	step_up
+	step_left
+	step_up
+	step_end
+
+ReceptionistMoveFromReceiver:
+	step_down
+	step_right
+	step_down
+	step_end
 
 GrampsScript:
 	jumptextfaceplayer UnknownText_0x62173
