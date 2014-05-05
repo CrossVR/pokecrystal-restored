@@ -900,6 +900,7 @@ InfoSignScript:
 
 ReceptionistScript:
 	loadfont
+	2writetext UnknownText_0x61072
 	checkitem EGG_TICKET
 	iftrue OddEggScript
 	2writetext UnknownText_0x61c18
