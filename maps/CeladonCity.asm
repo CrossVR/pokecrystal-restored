@@ -53,7 +53,7 @@ TeacherScript_0x1a9f5f: ; 0x1a9f5f
 ; 0x1a9f62
 
 LassScript_0x1a9f62: ; 0x1a9f62
-	jumptextfaceplayer UnknownText_0x1aa306
+	jumptextfaceplayer UnknownText_0x1aa25b
 ; 0x1a9f65
 
 MapCeladonCitySignpost0Script: ; 0x1a9f65
