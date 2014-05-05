@@ -141,7 +141,7 @@ UnknownScript_0x59228: ; 0x59228
 ; 0x5922e
 
 UnknownScript_0x5922e: ; 0x5922e
-	special $00a0
+	checkevent EVENT_MOBILE_REGISTERED
 	iftrue PokeComScript
 	2writetext UnknownText_0x59669
 	closetext
