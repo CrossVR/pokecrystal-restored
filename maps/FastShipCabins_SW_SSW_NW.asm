@@ -115,7 +115,7 @@ TrainerGuitaristClyde: ; 0x75a8b
 
 GuitaristClydeScript: ; 0x75a97
 	talkaftercancel
-	special $00a0
+	checkevent EVENT_MOBILE_REGISTERED
 	iftrue UnknownScript_0x75aa5
 	loadfont
 	2writetext UnknownText_0x75d65
