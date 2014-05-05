@@ -219,6 +219,7 @@ EVENT_ERIN_CALCIUM                                     EQU $33b
 EVENT_BUENA_OFFERED_HER_PHONE_NUMBER                   EQU $33c
 EVENT_MET_BUENA                                        EQU $33d
 EVENT_GOT_ODD_EGG_TICKET                               EQU $33e
+EVENT_MOBILE_REGISTERED                                EQU $33f
 EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER                  EQU $340
 EVENT_BEAT_SWIMMERF_ELAINE                             EQU $3e8
 EVENT_BEAT_SWIMMERF_PAULA                              EQU $3e9

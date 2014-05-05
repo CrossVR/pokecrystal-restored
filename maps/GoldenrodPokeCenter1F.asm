@@ -12,9 +12,8 @@ NurseScript_0x60f91: ; 0x60f91
 ; 0x60f94
 
 UnknownScript_0x60f94: ; 0x60f94
-	writebyte $b
-	special $0086
-	if_equal $b, UnknownScript_0x60f9e
+	checkevent EVENT_MOBILE_REGISTERED
+	iftrue UnknownScript_0x60f9e
 	end
 ; 0x60f9e
 
@@ -46,9 +45,8 @@ UnknownScript_0x60fd8: ; 0x60fd8
 ; 0x60fd9
 
 UnknownScript_0x60fd9: ; 0x60fd9
-	writebyte $b
-	special $0086
-	if_equal $b, UnknownScript_0x60fe3
+	checkevent EVENT_MOBILE_REGISTERED
+	iftrue UnknownScript_0x60fe3
 	end
 ; 0x60fe3
 
@@ -901,6 +899,7 @@ InfoSignScript:
 ReceptionistScript:
 	loadfont
 	2writetext UnknownText_0x61072
+	setevent EVENT_MOBILE_REGISTERED
 	checkitem EGG_TICKET
 	iftrue OddEggScript
 	2writetext UnknownText_0x61c18
