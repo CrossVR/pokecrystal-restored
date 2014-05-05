@@ -144,8 +144,9 @@ LassScript_0x1a61c4: ; 0x1a61c4
 ; 0x1a61c7
 
 PokefanMScript_0x1a61c7: ; 0x1a61c7
-	checkevent EVENT_MOBILE_REGISTERED
-	iftrue UnknownScript_0x1a61d0
+	writebyte $0
+	special $0086
+	if_not_equal $0, UnknownScript_0x1a61d0
 	jumptextfaceplayer UnknownText_0x1a646a
 ; 0x1a61d0
 
