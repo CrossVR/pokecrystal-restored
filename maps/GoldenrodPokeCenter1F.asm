@@ -923,9 +923,9 @@ OddEggScript:
 	loadfont
 	2writetext UnknownText_0x61936
 	closetext
-	special $007d
+	special SPECIAL_ODDEGG
 	2writetext ReceivedEgg
-	playsound $0091
+	playsound SFX_KEY_ITEM
 	waitbutton
 	closetext
 	loadmovesprites
