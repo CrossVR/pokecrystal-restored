@@ -1017,9 +1017,9 @@ Function_0xed68: ; ed68
 
 	inc hl
 	cp -1
-	jr z, .next
+	jr z, .term
 	cp c
-	jr nz, .next
+	jr nz, .loop
 	sla b
 	jr c, .max
 
@@ -1030,7 +1030,7 @@ Function_0xed68: ; ed68
 	ld b, $ff
 	ret
 
-.next
+.term
 	dec d
 	jr nz, .loop
 	ret
