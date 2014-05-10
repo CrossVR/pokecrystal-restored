@@ -930,7 +930,7 @@ GLOBAL EvosAttacksPointers
 	push bc
 	ld a, BANK(EvosAttacks)
 	call GetFarByte
-	cp MOON_STONE + 2 ; BURN_HEAL
+	cp MOON_STONE
 	pop bc
 	ret nz
 
