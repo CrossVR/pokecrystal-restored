@@ -917,7 +917,8 @@ OddEggScript:
 	closetext
 	loadmovesprites
 	applymovement $3, ReceptionistMoveToReceiver
-	wait 10
+	playsound SFX_DEX_FANFARE_20_49
+	special SPECIAL_WAITSFX
 	applymovement $3, ReceptionistMoveFromReceiver
 	loadfont
 	2writetext UnknownText_0x61936
@@ -942,15 +943,15 @@ ReceivedEgg: ; 0x631ae
 	done
 
 ReceptionistMoveToReceiver:
-	step_up
-	step_left
-	step_up
+	slow_step_up
+	slow_step_left
+	slow_step_up
 	step_end
 
 ReceptionistMoveFromReceiver:
-	step_down
-	step_right
-	step_down
+	slow_step_down
+	slow_step_right
+	slow_step_down
 	step_end
 
 GrampsScript:
