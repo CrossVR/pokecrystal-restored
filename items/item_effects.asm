@@ -984,7 +984,7 @@ Function_0xed12: ; ed12
 	pop de
 	cp d
 	pop bc
-	ret nz
+	ret z
 
 	sla b
 	jr c, .asm_ed62
